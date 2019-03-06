@@ -1,0 +1,17 @@
+.wrapper{
+  background-color: $background_purple;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .error-text{
+    color: $color_white;
+    font-size: 72px;
+  }
+
+  .active{
+    background-color: $color_white;
+  }
+}

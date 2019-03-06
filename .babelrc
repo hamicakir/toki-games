@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "cwd": "babelrc",
+      "alias": {
+        "components": "./src/components",
+        "configs": "./src/configs",
+        "pages": "./src/pages",
+        "reducers": "./src/reducers",
+        "sagas": "./src/sagas",
+        "test": "./test"
+      }
+    }]
+  ]
+}
