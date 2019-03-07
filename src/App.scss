@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a{ text-decoration: none; }
@@ -13,4 +13,8 @@ a{ text-decoration: none; }
   width: 100%;
   margin: 0 15px;
   display: flex;
+}
+
+p{
+  color: #424242;
 }

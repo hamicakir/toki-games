@@ -1,4 +1,5 @@
 import { fromJS } from "immutable";
+import { createSelector } from 'reselect';
 
 export const types = {
     BUSINESS_LOAD_START: "BUSINESS_LOAD_START",
@@ -21,15 +22,23 @@ const initialState = fromJS({
 const businessReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.BUSINESS_LOAD_START:
-            return state.set("loading", fromJS(true));
+            return state
+                .set("loading", fromJS(true));
         case types.BUSINESS_LOAD_SUCCESS:
-            return state.set("data", fromJS(action.payload));
+            return state
+                .set("data", fromJS(action.payload))
+                .set("loading", false);
         case types.BUSINESS_LOAD_ERROR:
-            return state.set("error", fromJS(action.error));
-
+            return state
+                .set("error", fromJS(action.error))
+                .set("loading", false);
         default:
             return state;
     }
 };
+
+export const businessFlightState = state => state.businessFlight;
+
+export const makeSelectBusinessFlight = () => createSelector(businessFlightState, substate => substate.toJS());
 
 export default businessReducer;

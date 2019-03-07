@@ -8,13 +8,12 @@ function getCheapFlightList(){
 }
 // ...
 
-// Our worker Saga: will perform the async increment task
 export function* getCheapFlight() {
     try{
-        const payload = yield call(getCheapFlightList())
+        const payload = yield call(getCheapFlightList)
         console.log(payload);
         if(payload){
-            yield put(actions.cheapLoadSuccess(payload));
+            yield put(actions.cheapLoadSuccess(payload.data));
         }
         console.log(payload);
     }catch(error){
@@ -22,7 +21,6 @@ export function* getCheapFlight() {
     }
 }
 
-// Our watcher Saga: spawn a new incrementAsync task on each INCREMENT_ASYNC
 export default [
     takeLatest(types.CHEAP_LOAD_START, getCheapFlight)
 ]

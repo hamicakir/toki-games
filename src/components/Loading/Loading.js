@@ -7,4 +7,4 @@ const Loading = ({classes}) => (
     <CircularProgress className={classes.progress}/>
 );
 
-export default withStyles(Loading);
+export default withStyles()(Loading);

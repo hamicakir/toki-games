@@ -4,9 +4,10 @@ import { BASE_URL } from './constants';
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    timeout: 3000,
+    timeout: 5000,
+    mode: 'no-cors',
     headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
     }
 });
 

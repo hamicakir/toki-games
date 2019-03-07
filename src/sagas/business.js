@@ -9,7 +9,8 @@ function getBusinessFlightList() {
 
 export function* getBusinessFlight() {
     try{
-        const payload = yield call(getBusinessFlightList());
+        const payload = yield call(getBusinessFlightList);
+        console.log(payload);
         if(payload){
             yield put(actions.businessLoadSuccess(payload.data));
         }
@@ -20,5 +21,5 @@ export function* getBusinessFlight() {
 }
 
 export default [
-    takeLatest(types.BUSINESS_LOAD_SUCCESS, getBusinessFlight)
+    takeLatest(types.BUSINESS_LOAD_START, getBusinessFlight)
 ]
