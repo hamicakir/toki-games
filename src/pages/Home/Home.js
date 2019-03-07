@@ -19,10 +19,7 @@ class Home extends Component{
     }
 
     render(){
-        console.log(this.props);
         const { businessFlights, cheapFlights } = this.props;
-        let flights = null;
-        console.log("Flight List", flights);
         return (
             <div>
                 <Header menuItems={menuItems}/>
