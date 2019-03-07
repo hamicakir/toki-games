@@ -1,0 +1,32 @@
+.wrapper{
+  background-color: #7a58a9;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .error-text{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 120px;
+  }
+
+  .active{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-box-shadow: 5px 5px 30px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 5px 5px 30px 2px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 30px 2px rgba(0,0,0,0.3);
+    color: #7a58a9;
+    &:focus{
+      color: #7a58a9;
+    }
+  }
+}

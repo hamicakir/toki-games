@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import exampleReducer from './exampleReducer'
+import businessFlightReducer from './business'
+import cheapFlightReducer from './cheap'
 
 const rootReducer = combineReducers({
-    exampleReducer,
+    businessFlight: businessFlightReducer,
+    cheapFlight: cheapFlightReducer,
 });
 
 export default rootReducer;
